@@ -17,6 +17,7 @@ class MainViewController: UIViewController,
                     (name: "Nguyễn Văn B", age: 36),
                     (name: "Nguyễn Văn C", age: 32),
                    ]
+    //☑︎☐
     
     @IBOutlet var tableView: UITableView? 
     override func viewDidLoad() {
@@ -29,10 +30,22 @@ class MainViewController: UIViewController,
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         let selectedPerson = persons[indexPath.row];
         cell.textLabel?.text  = "\(selectedPerson.name) - \(selectedPerson.age)"
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .red : .green
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return persons.count
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected: \(indexPath.row)")
+    }
+    @IBAction func btnAdd(sender: Any) {
+        persons.append((name: "Nguyen Van X",27))
+        tableView?.reloadData()
+    }
+    @IBAction func btnDelete(sender: Any) {
+        persons.remove(at: 0)
+        tableView?.reloadData()
     }
     
 }
