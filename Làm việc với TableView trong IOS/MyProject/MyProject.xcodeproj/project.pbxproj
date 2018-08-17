@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4D99BF21263C9F000BBCC6 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D99BE21263C9F000BBCC6 /* FoodTableViewCell.swift */; };
+		FA4D99C221269729000BBCC6 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D99C121269729000BBCC6 /* Food.swift */; };
 		FAA1A87A212253FA008A0CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1A879212253FA008A0CC4 /* AppDelegate.swift */; };
 		FAA1A87C212253FB008A0CC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1A87B212253FA008A0CC4 /* ViewController.swift */; };
 		FAA1A87F212253FB008A0CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA1A87D212253FB008A0CC4 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA4D99BE21263C9F000BBCC6 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		FA4D99C121269729000BBCC6 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		FAA1A876212253FA008A0CC4 /* MyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA1A879212253FA008A0CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA1A87B212253FA008A0CC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4D99C021269683000BBCC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA4D99C121269729000BBCC6 /* Food.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FAA1A86D212253FA008A0CC4 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,8 @@
 				FAA1A879212253FA008A0CC4 /* AppDelegate.swift */,
 				FAA1A87B212253FA008A0CC4 /* ViewController.swift */,
 				FAA1A8A721228BBA008A0CC4 /* MainViewController.swift */,
+				FA4D99BE21263C9F000BBCC6 /* FoodTableViewCell.swift */,
+				FA4D99C021269683000BBCC6 /* Models */,
 				FAA1A87D212253FB008A0CC4 /* Main.storyboard */,
 				FAA1A880212253FD008A0CC4 /* Assets.xcassets */,
 				FAA1A882212253FD008A0CC4 /* LaunchScreen.storyboard */,
@@ -260,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA1A8A821228BBA008A0CC4 /* MainViewController.swift in Sources */,
+				FA4D99BF21263C9F000BBCC6 /* FoodTableViewCell.swift in Sources */,
+				FA4D99C221269729000BBCC6 /* Food.swift in Sources */,
 				FAA1A87C212253FB008A0CC4 /* ViewController.swift in Sources */,
 				FAA1A87A212253FA008A0CC4 /* AppDelegate.swift in Sources */,
 			);
