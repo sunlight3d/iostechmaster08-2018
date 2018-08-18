@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MyProject
 //
-//  Created by Nguyen Duc Hoang on 8/14/18.
+//  Created by Nguyen Duc Hoang on 8/18/18.
 //  Copyright © 2018 Nguyen Duc Hoang. All rights reserved.
 //
 
