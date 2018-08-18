@@ -80,7 +80,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="30"/>
                                         <state key="normal" title="Add"/>
                                         <connections>
-<<<<<<< HEAD:Làm việc với TableView trong IOS/MyProject/MyProject/Base.lproj/Main.storyboard
                                             <action selector="btnAddWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sbE-EP-1NJ"/>
                                         </connections>
                                     </button>
@@ -91,20 +90,9 @@
                                         </state>
                                         <connections>
                                             <action selector="btnDeleteWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OIn-AR-XMV"/>
-=======
                                             <action selector="btnAddWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ENF-uV-FbM"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRw-Nt-N6Z">
-                                        <rect key="frame" x="150" y="0.0" width="225" height="30"/>
-                                        <state key="normal" title="Delete">
-                                            <color key="titleColor" red="1" green="0.13791214349766034" blue="0.066872247275669983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnDeleteWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNa-Zo-I6r"/>
->>>>>>> af220292e25dcc7c26fc5fa3b8f58d8c7aa11dad:LessonX/MyProject/MyProject/Base.lproj/Main.storyboard
-                                        </connections>
-                                    </button>
+                                    </button>                                    
                                 </subviews>
                             </stackView>
                         </subviews>
