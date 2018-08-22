@@ -13,6 +13,8 @@
 		FA44ED0B212C0CC200A764B2 /* MyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44ED0A212C0CC200A764B2 /* MyProjectTests.swift */; };
 		FA44ED16212C0CC200A764B2 /* MyProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44ED15212C0CC200A764B2 /* MyProjectUITests.swift */; };
 		FA44ED24212C0D6400A764B2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44ED23212C0D6400A764B2 /* SplashViewController.swift */; };
+		FA8B17A1212CEF39004B95D7 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B17A0212CEF39004B95D7 /* ProductViewController.swift */; };
+		FA8B17A3212CEF4C004B95D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B17A2212CEF4C004B95D7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		FA44ED15212C0CC200A764B2 /* MyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectUITests.swift; sourceTree = "<group>"; };
 		FA44ED17212C0CC200A764B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA44ED23212C0D6400A764B2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		FA8B17A0212CEF39004B95D7 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		FA8B17A2212CEF4C004B95D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				FA44ECF5212C0CBF00A764B2 /* AppDelegate.swift */,
 				FA44ED23212C0D6400A764B2 /* SplashViewController.swift */,
+				FA8B17A0212CEF39004B95D7 /* ProductViewController.swift */,
+				FA8B17A2212CEF4C004B95D7 /* LoginViewController.swift */,
 				FA44ECFC212C0CC200A764B2 /* Assets.xcassets */,
 				FA44ECFE212C0CC200A764B2 /* LaunchScreen.storyboard */,
 				FA44ED01212C0CC200A764B2 /* Info.plist */,
@@ -252,6 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8B17A3212CEF4C004B95D7 /* LoginViewController.swift in Sources */,
+				FA8B17A1212CEF39004B95D7 /* ProductViewController.swift in Sources */,
 				FA44ECF6212C0CBF00A764B2 /* AppDelegate.swift in Sources */,
 				FA44ED24212C0D6400A764B2 /* SplashViewController.swift in Sources */,
 			);
