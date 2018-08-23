@@ -35,11 +35,24 @@ class LoginViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(stackView)
         stackView.addArrangedSubview(txtEmail)
         stackView.addArrangedSubview(txtPassword)
         stackView.addArrangedSubview(loginButton)
         
+        txtEmail.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        
+        txtPassword.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        loginButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        loginButton.addTarget(self, action: #selector(btnLogin), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
-
+    @objc func btnLogin(sender: Any) {
+        UserDefaults.standard.set(true, forKey: "userlogin")            
+    }
+    
+    
+    
 }
