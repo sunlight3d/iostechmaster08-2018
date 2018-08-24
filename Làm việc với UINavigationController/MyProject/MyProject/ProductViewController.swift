@@ -17,27 +17,51 @@ class ProductViewController: UIViewController {
         return label
     }()
     
+    let logoutButton:UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor(red: 36/255, green: 45/255, blue: 49/255, alpha: 1)
+        button.setTitle("Logout", for: .normal)
+        button.layer.cornerRadius = 25
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        self.navigationController?.isNavigationBarHidden = false
+        view.backgroundColor = .white        
         layoutLblTitle()
+        layoutlogoutButton()
     }
     private func layoutLblTitle() {
         view.addSubview(lblTitle)
         lblTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         lblTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
-    private func setupNavigation(){
-        let rightButton = UIBarButtonItem(title: "Logout",
-                                          style: .plain,
-                                          target: self,
-                                          action: #selector(btnLogout))
-        self.navigationItem.rightBarButtonItem = rightButton
+    private func layoutlogoutButton() {
+        view.addSubview(logoutButton)
+        
+        logoutButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        logoutButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        logoutButton.topAnchor.constraint(equalTo: lblTitle.bottomAnchor, constant: 30).isActive = true
+        logoutButton.addTarget(self, action: #selector(btnLogout), for: .touchUpInside)
+        logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
     }
+    
     @objc func btnLogout() {
         UserDefaults.standard.set(false, forKey: "userlogin")
-        navigationController?.popViewController(animated: true)
+        var isLoggedOut = false
+        navigationController?.viewControllers.forEach({ (viewController) in
+            if (viewController is LoginViewController) {
+                navigationController?.popToViewController(viewController, animated: true)
+                isLoggedOut = true
+            }
+        })
+        if(!isLoggedOut) {
+            navigationController?.pushViewController(LoginViewController(), animated: true)
+        }
+        
+        
     }
 
 }
