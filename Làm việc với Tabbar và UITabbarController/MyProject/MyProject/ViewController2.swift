@@ -13,6 +13,7 @@ class ViewController2: UIViewController {
     var lblTitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "This is Tab2"
         return label
     }()
     
@@ -20,7 +21,7 @@ class ViewController2: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(lblTitle)
-        lblTitle.text = "This is Tab2"
+        //lblTitle.text = "This is Tab2"
         lblTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         lblTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         

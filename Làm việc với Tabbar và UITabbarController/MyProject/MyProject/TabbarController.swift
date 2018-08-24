@@ -43,7 +43,8 @@ class TabbarController: UITabBarController {
         case 1:
             print("tab 1")
             self.tabBar.tintColor = .green
-            (viewControllers![item.tag] as! ViewController2).lblTitle.text = self.name
+//            (viewControllers![item.tag] as! ViewController2).lblTitle.text = self.name
+            vc2.lblTitle.text = self.name
         case 2:
             print("tab 2")
             self.tabBar.tintColor = .blue
