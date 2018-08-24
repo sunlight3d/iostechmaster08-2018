@@ -29,25 +29,51 @@ class LoginViewController: UIViewController {
     let stackView:UIStackView = {
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.axis = .vertical
         sv.alignment = .center
-        sv.distribution = UIStackViewDistribution.fill
+        sv.distribution = .equalSpacing
+//        sv.spacing = 10
+        
         return sv
     }()
+    private func layoutTxtEmail() {
+        stackView.addArrangedSubview(txtEmail)
+        txtEmail.backgroundColor = .red
+        txtEmail.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        txtEmail.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 30).isActive = true
+        txtEmail.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -30).isActive = true
+    }
+    private func layoutTxtPassword() {
+        stackView.addArrangedSubview(txtPassword)
+        txtPassword.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        txtPassword.leftAnchor.constraint(equalTo: txtEmail.leftAnchor).isActive = true
+        txtPassword.rightAnchor.constraint(equalTo: txtEmail.rightAnchor).isActive = true
+        txtPassword.topAnchor.constraint(equalTo: txtEmail.bottomAnchor, constant: 40).isActive = true
+    }
+    private func layoutLoginButton() {
+        stackView.addArrangedSubview(loginButton)
+        loginButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        loginButton.leftAnchor.constraint(equalTo: txtEmail.leftAnchor).isActive = true
+        loginButton.rightAnchor.constraint(equalTo: txtEmail.rightAnchor).isActive = true
+        loginButton.topAnchor.constraint(equalTo: txtEmail.bottomAnchor, constant: 40).isActive = true
+        loginButton.addTarget(self, action: #selector(btnLogin), for: .touchUpInside)
+    }
+    private func layoutStackView() {
+        view.addSubview(stackView)
+        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(stackView)
-        stackView.addArrangedSubview(txtEmail)
-        stackView.addArrangedSubview(txtPassword)
-        stackView.addArrangedSubview(loginButton)
-        
-        txtEmail.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        
-        txtPassword.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        loginButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        loginButton.addTarget(self, action: #selector(btnLogin), for: .touchUpInside)
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        layoutStackView()
+        layoutTxtEmail()
+        layoutTxtPassword()
+//        layoutLoginButton()
     }
     @objc func btnLogin(sender: Any) {
         UserDefaults.standard.set(true, forKey: "userlogin")            
